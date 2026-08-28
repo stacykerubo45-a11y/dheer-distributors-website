@@ -1,13 +1,19 @@
+
 import "../styles/AboutSection.css";
 
 export default function AboutSection() {
   return (
-    <section className="about-section" aria-labelledby="about-title">
+    <section
+      className="about-section"
+      aria-labelledby="about-title"
+    >
       <div className="about-container">
 
         <article className="about-content">
           <header>
-            <p className="about-eyebrow">ABOUT DHEER DISTRIBUTORS</p>
+            <p className="about-eyebrow">
+              ABOUT DHEER DISTRIBUTORS
+            </p>
 
             <h2 id="about-title">
               Welcome to Dheer Distributors Ltd
@@ -29,8 +35,8 @@ export default function AboutSection() {
 
           <p>
             We are one of Kenya's leading power tools and general hardware
-            suppliers. We are stockists of reputable brands such as
-            <strong> Ingco, Bosch, Makute, Tolsen and Total.</strong>
+            suppliers. We are stockists of reputable brands such as{" "}
+            <strong>Ingco, Bosch, Makute, Tolsen and Total.</strong>{" "}
             We also stock related accessories to help you make the best
             of your power tools.
           </p>
@@ -46,7 +52,7 @@ export default function AboutSection() {
 
         <figure className="about-image">
           <img
-            src="../images/dheer-about.webp"
+            src={`${import.meta.env.BASE_URL}images/dheer-about.webp`}
             alt="Dheer Distributors power tools and general hardware products in Kenya"
             width="800"
             height="500"
@@ -62,3 +68,4 @@ export default function AboutSection() {
     </section>
   );
 }
+

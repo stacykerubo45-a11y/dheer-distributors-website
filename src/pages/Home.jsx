@@ -1,14 +1,13 @@
+
 import { useEffect, useState } from "react";
 import "../styles/Home.css";
 
 const backgrounds = [
- "/images/ingco-background-image.webp",
-  "/images/bosch-background.webp",
-  "/images/makita-background.webp",
-  "/images/makute-background.webp",
-  
-   "/images/total-background.webp",
- 
+  "images/ingco-background-image.webp",
+  "images/bosch-background.webp",
+  "images/makita-background.webp",
+  "images/makute-background.webp",
+  "images/total-background.webp",
 ];
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
     <main
       className="home"
       style={{
-        backgroundImage: `url(${backgrounds[currentImage]})`,
+        backgroundImage: `url(${import.meta.env.BASE_URL}${backgrounds[currentImage]})`,
       }}
     >
       <div className="home-overlay"></div>
@@ -73,3 +72,4 @@ export default function Home() {
     </main>
   );
 }
+

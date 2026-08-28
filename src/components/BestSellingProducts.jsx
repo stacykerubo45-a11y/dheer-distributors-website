@@ -1,3 +1,4 @@
+
 import { ShoppingCart, Star } from "lucide-react";
 import "../styles/BestSellingProducts.css";
 
@@ -12,7 +13,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.8,
     reviews: 54,
-    image: "/images/products/dewalt-grinder.webp",
+    image: "images/products/dewalt-grinder.webp",
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.7,
     reviews: 31,
-    image: "/images/products/total-drill.webp",
+    image: "images/products/total-drill.webp",
   },
   {
     id: 3,
@@ -36,7 +37,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.8,
     reviews: 20,
-    image: "/images/products/claw-hammer.webp",
+    image: "images/products/claw-hammer.webp",
   },
   {
     id: 4,
@@ -48,7 +49,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.9,
     reviews: 28,
-    image: "/images/products/copper-cable.webp",
+    image: "images/products/copper-cable.webp",
   },
   {
     id: 5,
@@ -60,7 +61,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.5,
     reviews: 18,
-    image: "/images/products/pvc-pipe.webp",
+    image: "images/products/pvc-pipe.webp",
   },
   {
     id: 6,
@@ -72,7 +73,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.7,
     reviews: 35,
-    image: "/images/products/paint.webp",
+    image: "images/products/paint.webp",
   },
   {
     id: 7,
@@ -84,7 +85,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.8,
     reviews: 42,
-    image: "/images/products/cement.webp",
+    image: "images/products/cement.webp",
   },
   {
     id: 8,
@@ -96,7 +97,7 @@ const products = [
     badge: "BESTSELLER",
     rating: 4.7,
     reviews: 34,
-    image: "/images/products/roofing-sheet.webp",
+    image: "images/products/roofing-sheet.webp",
   },
 ];
 
@@ -123,8 +124,10 @@ export default function BestSellingProducts() {
         {/* PRODUCTS GRID */}
         <div className="products-grid">
           {products.map((product) => (
-            <article className="product-card" key={product.id}>
-
+            <article
+              className="product-card"
+              key={product.id}
+            >
               {/* PRODUCT IMAGE */}
               <div className="product-image-container">
 
@@ -141,9 +144,10 @@ export default function BestSellingProducts() {
                 )}
 
                 <img
-                  src={product.image}
+                  src={`${import.meta.env.BASE_URL}${product.image}`}
                   alt={product.name}
                   className="product-image"
+                  loading="lazy"
                 />
               </div>
 

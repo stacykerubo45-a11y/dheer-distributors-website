@@ -1,77 +1,78 @@
+
 import "../styles/TrustedBrands.css";
 
 const brands = [
   {
     name: "Total",
-    logo: "/images/brands/total.webp",
+    logo: "images/brands/total.webp",
   },
   {
     name: "Bosch",
-    logo: "/images/brands/bosch.webp",
+    logo: "images/brands/bosch.webp",
   },
   {
     name: "Ingco",
-    logo: "/images/brands/ingco.webp",
+    logo: "images/brands/ingco.webp",
   },
   {
     name: "Tolsen",
-    logo: "/images/brands/tolsen.webp",
+    logo: "images/brands/tolsen.webp",
   },
   {
     name: "Deli",
-    logo: "/images/brands/deli.webp",
+    logo: "images/brands/deli.webp",
   },
   {
     name: "Uyustools",
-    logo: "/images/brands/uyustools.webp",
+    logo: "images/brands/uyustools.webp",
   },
   {
     name: "Stanley",
-    logo: "/images/brands/stanley.webp",
+    logo: "images/brands/stanley.webp",
   },
   {
     name: "Wadfow",
-    logo: "/images/brands/wadfow.webp",
+    logo: "images/brands/wadfow.webp",
   },
   {
     name: "Prescott",
-    logo: "/images/brands/prescott.webp",
+    logo: "images/brands/prescott.webp",
   },
   {
     name: "Proskit",
-    logo: "/images/brands/proskit.webp",
+    logo: "images/brands/proskit.webp",
   },
   {
     name: "Makita",
-    logo: "/images/brands/makita.webp",
+    logo: "images/brands/makita.webp",
   },
   {
     name: "Makute",
-    logo: "/images/brands/makute.webp",
+    logo: "images/brands/makute.webp",
   },
   {
     name: "Tanquin",
-    logo: "/images/brands/tanquin.webp",
+    logo: "images/brands/tanquin.webp",
   },
   {
     name: "Fixtec",
-    logo: "/images/brands/fixtec.webp",
+    logo: "images/brands/fixtec.webp",
   },
   {
     name: "Worksite",
-    logo: "/images/brands/worksite.webp",
+    logo: "images/brands/worksite.webp",
   },
   {
     name: "Black & Decker",
-    logo: "/images/brands/black-decker.webp",
+    logo: "images/brands/black-decker.webp",
   },
   {
     name: "CAT",
-    logo: "/images/brands/cat.webp",
+    logo: "images/brands/cat.webp",
   },
   {
     name: "Ryobi",
-    logo: "/images/brands/ryobi.webp",
+    logo: "images/brands/ryobi.webp",
   },
 ];
 
@@ -88,7 +89,9 @@ export default function TrustedBrands() {
 
         <div className="trusted-brands-heading">
           <span>OUR PARTNERS</span>
+
           <h2>Trusted Brands</h2>
+
           <p>
             Quality products from brands trusted by professionals.
           </p>
@@ -98,7 +101,7 @@ export default function TrustedBrands() {
           <div className="brands-track">
             {scrollingBrands.map((brand, index) => (
               <a
-                href={`/brand/${brand.name
+                href={`${import.meta.env.BASE_URL}brand/${brand.name
                   .toLowerCase()
                   .replaceAll(" ", "-")
                   .replaceAll("&", "and")}`}
@@ -106,8 +109,9 @@ export default function TrustedBrands() {
                 key={`${brand.name}-${index}`}
               >
                 <img
-                  src={brand.logo}
+                  src={`${import.meta.env.BASE_URL}${brand.logo}`}
                   alt={`${brand.name} logo`}
+                  loading="lazy"
                 />
               </a>
             ))}
@@ -118,3 +122,4 @@ export default function TrustedBrands() {
     </section>
   );
 }
+
