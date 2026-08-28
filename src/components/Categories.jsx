@@ -1,41 +1,47 @@
-
 import "../styles/Categories.css";
 
 const categories = [
   {
     title: "Power Tools",
-    image: "/images/categories/power-tools.webp",
-    description: "Drills, grinders, saws and other high-performance power tools.",
+    image: "images/categories/power-tools.webp",
+    description:
+      "Drills, grinders, saws and other high-performance power tools.",
   },
   {
     title: "Hand Tools",
-    image: "/images/categories/hand-tools.webp",
-    description: "Hammers, wrenches, screwdrivers and durable hand tools.",
+    image: "images/categories/hand-tools.webp",
+    description:
+      "Hammers, wrenches, screwdrivers and durable hand tools.",
   },
   {
     title: "Fasteners",
-    image: "/images/categories/fasteners.webp",
-    description: "Bolts, nuts, screws and other reliable fastening solutions.",
+    image: "images/categories/fasteners.webp",
+    description:
+      "Bolts, nuts, screws and other reliable fastening solutions.",
   },
   {
     title: "Plumbing Materials",
-    image: "/images/categories/plumbing.webp",
-    description: "Pipes, fittings, valves and essential plumbing supplies.",
+    image: "images/categories/plumbing.webp",
+    description:
+      "Pipes, fittings, valves and essential plumbing supplies.",
   },
   {
     title: "Gardening",
-    image: "/images/categories/gardening.webp",
-    description: "Pruners, spades, hoes and tools for gardening and landscaping.",
+    image: "images/categories/gardening.webp",
+    description:
+      "Pruners, spades, hoes and tools for gardening and landscaping.",
   },
   {
     title: "Electricals",
-    image: "/images/categories/electricals.webp",
-    description: "Cables, switches, sockets and essential electrical accessories.",
+    image: "images/categories/electricals.webp",
+    description:
+      "Cables, switches, sockets and essential electrical accessories.",
   },
   {
     title: "General Hardware",
-    image: "/images/categories/general-hardware.webp",
-    description: "Locks, hinges, brackets and everyday hardware essentials.",
+    image: "images/categories/general-hardware.webp",
+    description:
+      "Locks, hinges, brackets and everyday hardware essentials.",
   },
 ];
 
@@ -71,7 +77,7 @@ export default function Categories() {
               className="category-card"
             >
               <img
-                src={category.image}
+                src={`${import.meta.env.BASE_URL}${category.image}`}
                 alt={category.title}
                 loading="lazy"
               />
