@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 
+
 import {
   Mail,
   Phone,
@@ -106,11 +107,11 @@ export default function Navbar() {
       <div className="main-nav">
         {/* Logo */}
         <div className="logo-container">
-          <img
-            src="/images/logo (2).png"
-            alt="Dheer Distributors Limited"
-            className="logo"
-          />
+        
+  <img  src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Dheer Distributors"
+  
+  className="logo"
+/>
         </div>
 
         {/* Search */}
