@@ -1,0 +1,224 @@
+/* =========================
+   TRUSTED BRANDS
+========================= */
+
+.trusted-brands {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 35px 0;
+  overflow: hidden;
+}
+
+.trusted-brands-container {
+  width: 94%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.trusted-brands-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.trusted-brands-heading span {
+  display: block;
+  color: #f5a900;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.trusted-brands-heading h2 {
+  margin: 0;
+  color: #171717;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.trusted-brands-heading p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 10px;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.brands-slider {
+  width: 100%;
+  overflow: hidden;
+
+  /*
+    Fades the edges slightly so the logos
+    smoothly disappear into the section.
+  */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+/* =========================
+   MOVING TRACK
+========================= */
+
+.brands-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  animation: brandsScroll 35s linear infinite;
+}
+
+/* Pause when user hovers */
+
+.brands-slider:hover .brands-track {
+  animation-play-state: paused;
+}
+
+/* =========================
+   BRAND ITEM
+========================= */
+
+.trusted-brand {
+  width: 150px;
+  height: 75px;
+
+  margin: 0 12px;
+
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.trusted-brand:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.trusted-brand img {
+  max-width: 150px;
+  max-height: 45px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================
+   RIGHT → LEFT ANIMATION
+========================= */
+
+@keyframes brandsScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .trusted-brands {
+    padding: 28px 0;
+  }
+
+  .trusted-brands-heading {
+    margin-bottom: 20px;
+  }
+
+  .trusted-brands-heading h2 {
+    font-size: 19px;
+  }
+
+  .trusted-brands-heading p {
+    font-size: 9px;
+  }
+
+  .trusted-brand {
+    width: 125px;
+    height: 65px;
+    margin: 0 8px;
+  }
+
+  .trusted-brand img {
+    max-width: 90px;
+    max-height: 38px;
+  }
+
+  .brands-track {
+    animation-duration: 30s;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .trusted-brands {
+    padding: 25px 0;
+  }
+
+  .trusted-brands-heading {
+    margin-bottom: 17px;
+  }
+
+  .trusted-brands-heading span {
+    font-size: 7px;
+  }
+
+  .trusted-brands-heading h2 {
+    font-size: 18px;
+  }
+
+  .trusted-brands-heading p {
+    font-size: 8px;
+  }
+
+  .trusted-brand {
+    width: 105px;
+    height: 55px;
+    margin: 0 6px;
+  }
+
+  .trusted-brand img {
+    max-width: 75px;
+    max-height: 32px;
+  }
+
+  .brands-track {
+    animation-duration: 25s;
+  }
+}

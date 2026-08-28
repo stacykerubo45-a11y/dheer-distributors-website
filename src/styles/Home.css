@@ -1,0 +1,541 @@
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  transition: background-image 0.8s ease-in-out;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.home-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(23, 23, 23, 0.9) 0%,
+    rgba(23, 23, 23, 0.65) 45%,
+    rgba(23, 23, 23, 0.25) 100%
+  );
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.home-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 750px;
+
+  padding: 60px 8%;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.home-subtitle {
+  color: #ffffff;
+
+  font-size: clamp(18px, 2.5vw, 30px);
+  font-weight: 700;
+
+  letter-spacing: clamp(2px, 0.4vw, 4px);
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.home-content h1 {
+  font-size: clamp(42px, 6vw, 78px);
+
+  line-height: 1.05;
+
+  color: #eaac6f;
+
+  margin: 0 0 25px;
+
+  font-weight: 700;
+}
+
+.home-content h1 span {
+  color: #f28c28;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.home-description {
+  max-width: 600px;
+
+  font-size: clamp(15px, 1.5vw, 18px);
+
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+
+  color: #f5f5f5;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.home-btn {
+  padding: 15px 30px;
+
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Primary Button */
+
+.primary-btn {
+  background: #f28c28;
+
+  color: #ffffff;
+
+  border: 2px solid #f28c28;
+}
+
+.primary-btn:hover {
+  background: #d96f0b;
+
+  border-color: #d96f0b;
+
+  transform: translateY(-3px);
+}
+
+
+/* Secondary Button */
+
+.secondary-btn {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+
+  color: #171717;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
+.slider-dots {
+  position: absolute;
+
+  z-index: 3;
+
+  bottom: 35px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #f28c28;
+
+  transform: scale(1.4);
+}
+
+
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1100px) {
+
+  .home {
+    min-height: 70vh;
+
+    background-position: center;
+  }
+
+  .home-content {
+    max-width: 650px;
+
+    padding: 50px 6%;
+  }
+
+  .home-content h1 {
+    font-size: clamp(40px, 6vw, 65px);
+  }
+
+  .home-description {
+    max-width: 520px;
+  }
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+  .home {
+    min-height: 70vh;
+
+    background-position: center;
+  }
+
+  .home-content {
+    padding: 50px 6%;
+  }
+
+  .home-subtitle {
+    font-size: 22px;
+
+    letter-spacing: 3px;
+  }
+
+  .home-content h1 {
+    font-size: clamp(38px, 7vw, 58px);
+  }
+
+  .home-description {
+    font-size: 16px;
+
+    max-width: 500px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .home {
+    min-height: calc(100vh - 120px);
+
+    background-position: center;
+  }
+
+
+  /* Darker overlay for readability */
+
+  .home-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(23, 23, 23, 0.88) 0%,
+      rgba(23, 23, 23, 0.72) 60%,
+      rgba(23, 23, 23, 0.5) 100%
+    );
+  }
+
+
+  /* Content */
+
+  .home-content {
+    max-width: 100%;
+
+    padding: 50px 7%;
+  }
+
+
+  /* Subtitle */
+
+  .home-subtitle {
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* Heading */
+
+  .home-content h1 {
+    font-size: clamp(36px, 10vw, 50px);
+
+    line-height: 1.08;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* Description */
+
+  .home-description {
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+  }
+
+
+  /* Buttons */
+
+  .home-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .home-btn {
+    width: 180px;
+
+    padding: 13px 20px;
+
+    font-size: 14px;
+  }
+
+
+  /* Slider dots */
+
+  .slider-dots {
+    bottom: 20px;
+
+    gap: 8px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+  .home {
+    min-height: calc(100vh - 130px);
+
+    background-position: 60% center;
+  }
+
+
+  .home-overlay {
+    background: rgba(23, 23, 23, 0.7);
+  }
+
+
+  .home-content {
+    padding: 40px 6%;
+  }
+
+
+  .home-subtitle {
+    font-size: 15px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .home-content h1 {
+    font-size: clamp(32px, 10vw, 43px);
+
+    line-height: 1.08;
+
+    margin-bottom: 18px;
+  }
+
+
+  .home-description {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-bottom: 25px;
+  }
+
+
+  .home-buttons {
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .home-btn {
+    width: 170px;
+
+    padding: 12px 18px;
+
+    font-size: 13px;
+  }
+
+
+  .slider-dots {
+    bottom: 15px;
+
+    gap: 7px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 375px) {
+
+  .home {
+    min-height: calc(100vh - 120px);
+  }
+
+  .home-content {
+    padding: 35px 6%;
+  }
+
+
+  .home-subtitle {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .home-content h1 {
+    font-size: 32px;
+
+    line-height: 1.08;
+
+    margin-bottom: 15px;
+  }
+
+
+  .home-description {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+
+  .home-btn {
+    width: 155px;
+
+    padding: 11px 15px;
+
+    font-size: 12px;
+  }
+
+
+  .slider-dots {
+    bottom: 12px;
+  }
+}
+
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 320px) {
+
+  .home {
+    min-height: 520px;
+  }
+
+  .home-content {
+    padding: 30px 5%;
+  }
+
+
+  .home-subtitle {
+    font-size: 12px;
+  }
+
+
+  .home-content h1 {
+    font-size: 29px;
+  }
+
+
+  .home-description {
+    font-size: 12px;
+  }
+
+
+  .home-btn {
+    width: 145px;
+
+    padding: 10px 12px;
+  }
+}
+

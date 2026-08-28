@@ -1,0 +1,272 @@
+
+.footer {
+  background: #171717;
+  color: #ffffff;
+  margin-top: 80px;
+}
+
+/* Main Footer */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 30px 50px;
+
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1.4fr;
+  gap: 50px;
+}
+
+/* About */
+.footer-logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+}
+
+.footer-logo span {
+  color: #d49a45;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-top: 4px;
+}
+
+.footer-about p {
+  color: #b9b9b9;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+  max-width: 360px;
+}
+
+/* Headings */
+.footer-column h3 {
+  font-size: 16px;
+  margin: 0 0 22px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background: #d49a45;
+}
+
+/* Lists */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 13px;
+}
+
+.footer-column li a {
+  color: #b9b9b9;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-column li a:hover {
+  color: #d49a45;
+  padding-left: 4px;
+}
+
+/* Contact */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #b9b9b9;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-item svg {
+  color: #d49a45;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-item a {
+  color: #b9b9b9;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #d49a45;
+}
+
+/* Socials */
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #3a3a3a;
+  border-radius: 50%;
+
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #d49a45;
+  border-color: #d49a45;
+  color: #171717;
+}
+
+/* Brands */
+.footer-brands {
+  border-top: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+
+  padding: 25px 30px;
+
+  text-align: center;
+}
+
+.footer-brands p {
+  color: #888;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 15px;
+}
+
+.brand-names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.brand-names span {
+  color: #d6d6d6;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  min-height: 70px;
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 13px;
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: #888;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #d49a45;
+}
+
+/* Back to Top */
+.back-to-top {
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #444;
+  background: transparent;
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #d49a45;
+  border-color: #d49a45;
+  color: #171717;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-about {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 45px 22px 35px;
+    gap: 35px;
+  }
+
+  .footer-about {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .brand-names {
+    gap: 5px;
+  }
+}
+
