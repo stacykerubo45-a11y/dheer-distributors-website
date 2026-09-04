@@ -506,12 +506,12 @@
   /* ---------- TOP BAR ---------- */
 
   .top-bar {
-    min-height: 60px;
+    min-height: 30px;
     height: auto;
-    padding: 10px 15px;
-    flex-direction: column;
+    padding: 2px 3px;
+    flex-direction: row;
     justify-content: center;
-    gap: 7px;
+    gap: 5px;
   }
 
   .top-left {
@@ -830,14 +830,25 @@
 ========================= */
 
 @media (max-width: 375px) {
-
+.top-bar {
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
   .top-left {
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    gap: 2px;
+    padding: 0;
+    font-size: 2px;
+    display: flex;
+    align-items: center;
   }
 
   .contact-item {
-    font-size: 10px;
+    font-size: 5px;
+    padding: 0;
+    flex-direction: row;
+
   }
 
   .main-nav {

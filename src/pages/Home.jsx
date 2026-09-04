@@ -1,6 +1,7 @@
-
 import { useEffect, useState } from "react";
 import "../styles/Home.css";
+
+
 
 const backgrounds = [
   "images/ingco-background-image.webp",
@@ -22,54 +23,57 @@ export default function Home() {
   }, []);
 
   return (
-    <main
-      className="home"
-      style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}${backgrounds[currentImage]})`,
-      }}
-    >
-      <div className="home-overlay"></div>
+    <>
+      <main
+        className="home"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}${backgrounds[currentImage]})`,
+        }}
+      >
+        <div className="home-overlay"></div>
 
-      <div className="home-content">
-        <p className="home-subtitle">
-          DHEER DISTRIBUTORS
-        </p>
+        <div className="home-content">
+          <p className="home-subtitle">
+            DHEER DISTRIBUTORS
+          </p>
 
-        <h1>
-          Quality Products.
-          <br />
-          <span>Reliable Solutions.</span>
-        </h1>
+          <h1>
+            Quality Products.
+            <br />
+            <span>Reliable Solutions.</span>
+          </h1>
 
-        <p className="home-description">
-          Your trusted partner for quality products and
-          reliable distribution solutions.
-        </p>
+          <p className="home-description">
+            Your trusted partner for quality products and
+            reliable distribution solutions.
+          </p>
 
-        <div className="home-buttons">
-          <button className="home-btn primary-btn">
-            Explore Products
-          </button>
+          <div className="home-buttons">
+            <button className="home-btn primary-btn">
+              Explore Products
+            </button>
 
-          <button className="home-btn secondary-btn">
-            Contact Us
-          </button>
+            <button className="home-btn secondary-btn">
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>
 
-      <div className="slider-dots">
-        {backgrounds.map((_, index) => (
-          <span
-            key={index}
-            className={
-              index === currentImage
-                ? "dot active"
-                : "dot"
-            }
-          ></span>
-        ))}
-      </div>
-    </main>
+        <div className="slider-dots">
+          {backgrounds.map((_, index) => (
+            <span
+              key={index}
+              className={
+                index === currentImage
+                  ? "dot active"
+                  : "dot"
+              }
+            ></span>
+          ))}
+        </div>
+      </main>
+
+  
+    </>
   );
 }
-

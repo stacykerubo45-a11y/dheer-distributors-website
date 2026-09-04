@@ -1,71 +1,183 @@
 
+import { Link } from "react-router-dom";
 import "../styles/AboutSection.css";
 
 export default function AboutSection() {
+  const galleryItems = [
+    {
+      image: "fasteners.webp",
+      alt: "Fasteners",
+      caption: "Fasteners",
+    },
+    {
+      image: "power-tools.webp",
+      alt: "Power Tools",
+      caption: "Power Tools",
+    },
+    {
+      image: "electrical.webp",
+      alt: "Electrical Supplies",
+      caption: "Electricals",
+    },
+    {
+      image: "plumbing.webp",
+      alt: "Plumbing Materials",
+      caption: "Plumbing",
+    },
+    {
+      image: "safety.webp",
+      alt: "Safety Equipment",
+      caption: "Safety Equipment",
+    },
+    {
+      image: "hand-tools.webp",
+      alt: "Hand Tools",
+      caption: "Hand Tools",
+    },
+    {
+      image: "compressors-pneumatic.webp",
+      alt: "Compressors and Pneumatics",
+      caption: "Compressors & Pneumatics",
+    },
+    {
+      image: "accessories.webp",
+      alt: "Tool Accessories",
+      caption: "Accessories",
+    },
+    {
+      image: "general-hardware.webp",
+      alt: "General Hardware",
+      caption: "General Hardware",
+    },
+    {
+      image: "gardening.webp",
+      alt: "Gardening Supplies",
+      caption: "Gardening",
+    },
+    {
+      image: "water-pump-side.webp",
+      alt: "Water Pumps",
+      caption: "Water Pumps",
+    },
+  ];
+
   return (
-    <section
-      className="about-section"
-      aria-labelledby="about-title"
-    >
+    <section className="about-section" aria-labelledby="about-title">
       <div className="about-container">
 
+        {/* TEXT CONTENT */}
         <article className="about-content">
-          <header>
-            <p className="about-eyebrow">
-              ABOUT DHEER DISTRIBUTORS
-            </p>
 
-            <h2 id="about-title">
-              Welcome to Dheer Distributors Ltd
-            </h2>
-          </header>
-
-          <p>
-            We have set the standards for excellence in everything we do.
-            Our aim is to provide the highest level of service with the
-            utmost integrity and honesty to all our customers, no matter
-            how big or small.
+          <p className="about-eyebrow">
+            About Dheer Distributors
           </p>
 
-          <p>
-            With many years of experience in the wholesale and retail
-            sector, we have the capacity to supply within Nairobi and
-            countrywide at very competitive prices.
-          </p>
+          <h2 className="about-title">
+            About Us
+          </h2>
+
+          <div className="about-accent"></div>
 
           <p>
-            We are one of Kenya's leading power tools and general hardware
-            suppliers. We are stockists of reputable brands such as{" "}
-            <strong>Ingco, Bosch, Makute, Tolsen and Total.</strong>{" "}
-            We also stock related accessories to help you make the best
-            of your power tools.
+            At Dheer Distributors Ltd, we have set the standards for
+            excellence in everything we do. With years of experience in
+            wholesale and retail, we offer competitive prices and efficient
+            delivery in Nairobi and countrywide. Our aim is to provide the
+            highest level of service in the shortest time.
+            Partner with us and let us support your success!
           </p>
 
-          <a
-            href="https://dheer-toolstore.co.ke/about-us"
+          <h2 className="about-title">
+            Mission
+          </h2>
+
+          <p>
+            At Dheer Distributors Ltd, our mission revolves around three core
+            principles: Value, Service, and Commitment.
+            These pillars drive our efforts to cultivate enduring
+            relationships with our Customers and Suppliers.
+          </p>
+
+          <h2 className="about-title">
+            Vision
+          </h2>
+
+          <p>
+            At Dheer Distributors Ltd, we're dedicated to delivering quality
+            Tools and hardware at very competitive prices, with the aim to
+            deliver in the shortest time.
+
+            We aim to lead in customer service by strengthening our brands,
+            and exemplary services. Every interaction is exceptional, and we
+            anticipate and exceed needs, building lasting trust and commitment
+            to our customers.
+
+            We are one of Kenya's leading Power Tools suppliers with renowned
+            brands including{" "}
+            <strong>
+              Bosch, Ryobi, Tolsen, Ingco, Makute, Total, Uyustools,
+              Tolsen Pneumatic & Air Compressors.
+            </strong>{" "}
+            We also stock related accessories to help you make the best of
+            your power tools.
+          </p>
+
+          <Link
+            to="/about-dheer"
             className="about-link"
           >
-            Learn More
-            <span aria-hidden="true"> →</span>
-          </a>
+            <span>Learn More</span>
+
+            <span
+              className="about-link-arrow"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </Link>
+
         </article>
 
-        <figure className="about-image">
-          <img
-            src={`${import.meta.env.BASE_URL}images/dheer-about.webp`}
-            alt="Dheer Distributors power tools and general hardware products in Kenya"
-            width="800"
-            height="500"
-            loading="lazy"
-          />
+        {/* IMAGE GALLERY */}
+        <figure className="about-gallery">
 
-          <figcaption>
-            Quality power tools and hardware products from Dheer Distributors.
+          <div className="gallery-heading">
+            <span>What We Supply</span>
+          </div>
+
+          <div className="gallery-grid">
+            {galleryItems.map((item, index) => (
+              <div
+                className={`gallery-card ${
+                  index === galleryItems.length - 1
+                    ? "gallery-card-large"
+                    : ""
+                }`}
+                key={item.image}
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/about/${item.image}`}
+                  alt={item.alt}
+                  loading="lazy"
+                />
+
+                <div className="gallery-overlay"></div>
+
+                <div className="gallery-caption">
+                  {item.caption}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <figcaption className="gallery-main-caption">
+            Quality tools, hardware and building supplies — delivered
+            across Kenya.
           </figcaption>
+
         </figure>
 
       </div>
     </section>
   );
 }
-
