@@ -5,6 +5,10 @@ import {
   FaDownload,
   FaTools,
   FaIndustry,
+  FaBullseye,
+  FaEye,
+  FaDirections,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 import companyProfile from "../assets/Dheer Company Profile .pdf";
@@ -15,25 +19,32 @@ export default function AboutDheer() {
       <section className="dheer-about-page">
         <div className="about-hero">
           <div className="overlay">
+            <p className="hero-eyebrow">About Us</p>
             <h1>About Dheer Distributors Ltd</h1>
             <p>
               Delivering quality tools, hardware, fasteners and industrial
               solutions across Kenya.
             </p>
+
+            <div className="hero-pill-row">
+              <span className="hero-pill">Wholesale &amp; Retail</span>
+              <span className="hero-pill">Countrywide Delivery</span>
+            </div>
           </div>
         </div>
 
         <div className="company-story">
           <div className="story-text">
+            <div className="section-accent"></div>
             <h2>Who We Are</h2>
 
             <p>
-             At Dheer Distributors Ltd, we have set the standards for
-            excellence in everything we do. With years of experience in
-            wholesale and retail, we offer competitive prices and efficient
-            delivery in Nairobi and countrywide. Our aim is to provide the
-            highest level of service in the shortest time.
-            Partner with us and let us support your success!
+              At Dheer Distributors Ltd, we have set the standards for
+              excellence in everything we do. With years of experience in
+              wholesale and retail, we offer competitive prices and efficient
+              delivery in Nairobi and countrywide. Our aim is to provide the
+              highest level of service in the shortest time.
+              Partner with us and let us support your success!
             </p>
 
             <p>
@@ -44,11 +55,11 @@ export default function AboutDheer() {
           </div>
 
           <div className="story-images">
-           <img
-                  src={`${import.meta.env.BASE_URL}images/about/about-ingco.webp`}
-                  alt="About Ingco photo"
-                  loading="lazy"
-                />
+            <img
+              src={`${import.meta.env.BASE_URL}images/about/about-ingco.webp`}
+              alt="About Ingco photo"
+              loading="lazy"
+            />
 
             <img
               src={`${import.meta.env.BASE_URL}images/about/about-total.webp`}
@@ -60,106 +71,165 @@ export default function AboutDheer() {
 
         <section className="mission-vision">
           <div className="card">
+            <div className="card-icon">
+              <FaBullseye />
+            </div>
             <h3>Mission</h3>
             <p>
-              To deliver quality tools and hardware at competitive prices while
-              building lasting relationships through value, service and
-              commitment.
+            At Dheer Distributors Ltd, our mission revolves around three core
+             principles: Value, Service, and Commitment. These pillars drive our
+              efforts to cultivate enduring
+             relationships with our Customers and Suppliers.
             </p>
           </div>
 
           <div className="card">
+            <div className="card-icon">
+              <FaEye />
+            </div>
             <h3>Vision</h3>
             <p>
-              To lead in customer service by strengthening our brands and
-              providing exceptional service that exceeds customer expectations.
+              Dheer Distributors is committed to being a one-stop solution 
+              for quality tools and hardware, offering a comprehensive range at
+               highly competitive prices. Our extensive catalogue spans power tools,
+                pneumatic equipment, air compressors, and the essential accessories
+                 that support them allowing our customers to source everything they 
+                 need from a single, reliable supplier. 
             </p>
           </div>
         </section>
 
         <section className="categories-section">
+          <p className="section-eyebrow">What We Supply</p>
           <h2>Our Product Categories</h2>
 
           <div className="categories-grid">
             <div className="category-card">
-              <FaTools />
+              <div className="category-icon">
+                <FaTools />
+              </div>
               <h4>Power Tools</h4>
             </div>
 
             <div className="category-card">
-              <FaIndustry />
+              <div className="category-icon">
+                <FaIndustry />
+              </div>
               <h4>Fasteners</h4>
             </div>
 
             <div className="category-card">
-              <FaTools />
+              <div className="category-icon">
+                <FaTools />
+              </div>
               <h4>Hand Tools</h4>
             </div>
 
             <div className="category-card">
-              <FaIndustry />
+              <div className="category-icon">
+                <FaIndustry />
+              </div>
               <h4>Safety Equipment</h4>
             </div>
 
             <div className="category-card">
-              <FaTools />
+              <div className="category-icon">
+                <FaTools />
+              </div>
               <h4>Plumbing Tools</h4>
             </div>
 
             <div className="category-card">
-              <FaIndustry />
+              <div className="category-icon">
+                <FaIndustry />
+              </div>
               <h4>Garden Tools</h4>
+            </div>
+              <div className="category-card">
+              <div className="category-icon">
+                <FaTools />
+              </div>
+              <h4>Electrical Supplies</h4>
+            </div>
+
+             <div className="category-card">
+              <div className="category-icon">
+                <FaIndustry />
+              </div>
+              <h4>General Hardware</h4>
+            </div>
+
+              <div className="category-card">
+              <div className="category-icon">
+                <FaTools />
+              </div>
+              <h4>Accessories</h4>
+            </div>
+
+             <div className="category-card">
+              <div className="category-icon">
+                <FaIndustry />
+              </div>
+              <h4>Compressors & Pneumatics</h4>
             </div>
           </div>
         </section>
 
         <section className="pdf-section">
-          <h2>Company Profile</h2>
+          <div className="pdf-intro">
+            <h2>Company Profile</h2>
 
-          <p>
-            View or download our complete company profile to learn more about
-            our products and services.
-          </p>
+            <p>
+              View or download our complete company profile to learn more
+              about our products and services.
+            </p>
 
-          <a
-            href={companyProfile}
-            download
-            className="download-btn"
-          >
-            <FaDownload />
-            Download Profile
-          </a>
+            <a href={companyProfile} download className="download-btn">
+              <FaDownload />
+              Download Profile
+            </a>
+          </div>
 
           <div className="pdf-viewer">
-            <iframe
-              src={companyProfile}
-              title="Dheer Company Profile"
-            />
+            <iframe src={companyProfile} title="Dheer Company Profile" />
           </div>
         </section>
 
         <section className="location-section">
           <h2>Visit Us</h2>
 
-          <div className="location-card">
-            <FaMapMarkerAlt className="location-icon" />
+          <div className="location-grid">
+            <div className="location-card">
+              <FaMapMarkerAlt className="location-icon" />
 
-            <div>
-              <h3>Our Location</h3>
+              <div>
+                <h3>Our Location</h3>
 
-              <p>
-                Nairobi Park Road, Opposite Blue Hut Hotel
-              </p>
+                <p>Nairobi Park Road, Opposite Blue Hut Hotel</p>
 
-              <p>+254 705 731 829</p>
+                <p className="location-phone">
+                  <FaPhoneAlt size={13} /> +254 705 731 829
+                </p>
+
+                <a
+                  className="directions-link"
+                  href="https://www.google.com/maps/search/?api=1&query=Park+Road+Nairobi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaDirections /> Get Directions
+                </a>
+              </div>
+            </div>
+
+            <div className="map-card">
+              <iframe
+                title="Google Map"
+                src="https://maps.google.com/maps?q=Park%20Road%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+              />
             </div>
           </div>
-
-          <iframe
-            title="Google Map"
-            src="https://maps.google.com/maps?q=Park%20Road%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-          />
         </section>
       </section>
 

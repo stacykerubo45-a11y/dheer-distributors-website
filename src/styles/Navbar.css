@@ -2,9 +2,14 @@
 .navbar {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  position: relative;
+
   z-index: 1000;
   height: auto;
+   position: fixed;       /* stick to the top */
+  top: 0;                /* anchor at very top */
+  left: 0;
+  width: 100%;           /* full width */
+  z-index: 1100;   
 }
 
 /* =========================
@@ -84,8 +89,7 @@
   align-items: center;
   padding: 15px 3%;
   gap: 45px;
-  
-  justify-content: space-evenly;
+ 
 }
 
 /* =========================
@@ -720,22 +724,14 @@
 
 @media (max-width: 480px) {
 
-  .top-bar {
-    padding: 8px 10px;
-  }
+ /* AFTER */
+.top-bar {
+  
+  display: none;
+}
 
-  .top-left {
-    gap: 8px 12px;
-  }
 
-  .contact-item {
-    font-size: 10px;
-  }
 
-  .contact-item svg {
-    width: 13px;
-    height: 13px;
-  }
 
   /* Main navigation */
 

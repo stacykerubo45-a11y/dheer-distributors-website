@@ -102,24 +102,16 @@ export default function AboutSection() {
             Vision
           </h2>
 
-          <p>
-            At Dheer Distributors Ltd, we're dedicated to delivering quality
-            Tools and hardware at very competitive prices, with the aim to
-            deliver in the shortest time.
+          <p>Dheer Distributors is committed to being a one-stop 
+            solution for quality tools and hardware, offering a comprehensive
+             range at highly competitive prices. Our extensive catalogue spans
+              power tools, pneumatic equipment, air compressors, and the essential
+               accessories that support them  allowing our customers to source everything
+                they need from a single, reliable supplier.
+What distinguishes Dheer Distributors, however, is our unwavering focus on customer 
+service. This commitment to service excellence, combined with a carefully curated selection of quality products, has established us as one of Kenya's leading suppliers of tools and hardware.
 
-            We aim to lead in customer service by strengthening our brands,
-            and exemplary services. Every interaction is exceptional, and we
-            anticipate and exceed needs, building lasting trust and commitment
-            to our customers.
 
-            We are one of Kenya's leading Power Tools suppliers with renowned
-            brands including{" "}
-            <strong>
-              Bosch, Ryobi, Tolsen, Ingco, Makute, Total, Uyustools,
-              Tolsen Pneumatic & Air Compressors.
-            </strong>{" "}
-            We also stock related accessories to help you make the best of
-            your power tools.
           </p>
 
           <Link

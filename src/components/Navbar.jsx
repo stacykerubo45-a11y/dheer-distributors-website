@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 import {
@@ -143,87 +144,85 @@ export default function Navbar() {
       </div>
 
       {/* ================= NAV LINKS ================= */}
-      <nav className={`navigation ${mobileMenu ? "mobile-open" : ""}`}>
-        <a href="/" className="active">
-          HOME
-        </a>
+     <nav className={`navigation ${mobileMenu ? "mobile-open" : ""}`}>
+  <NavLink
+    to="/"
+    className={({ isActive }) => (isActive ? "active" : "")}
+    onClick={() => setMobileMenu(false)}   // close menu
+  >
+    HOME
+  </NavLink>
 
-        <a href="/about">
-          ABOUT US
-        </a>
+  <NavLink
+    to="/about-dheer"
+    className={({ isActive }) => (isActive ? "active" : "")}
+    onClick={() => setMobileMenu(false)}   // close menu
+  >
+    ABOUT US
+  </NavLink>
 
-        <a href="/shop">
-          SHOP
-        </a>
+  <a href="/shop" onClick={() => setMobileMenu(false)}>
+    SHOP
+  </a>
 
-        {/* ================= CATEGORIES ================= */}
-        <div className="category-wrapper">
-          <button
-            className="category-button"
-            onClick={() => setCategoriesOpen(!categoriesOpen)}
+  {/* Categories */}
+  <div className="category-wrapper">
+    <button
+      className="category-button"
+      onClick={() => setCategoriesOpen(!categoriesOpen)}
+    >
+      CATEGORIES
+      <ChevronDown size={16} className={categoriesOpen ? "arrow-up" : ""} />
+    </button>
+    {categoriesOpen && (
+      <div className="category-menu">
+        {categories.map((category) => (
+          <a
+            href={`/category/${category.name.toLowerCase().replaceAll(" ", "-")}`}
+            key={category.name}
+            className="category-item"
+            onClick={() => setMobileMenu(false)}   // close menu
           >
-            CATEGORIES
-            <ChevronDown
-              size={16}
-              className={categoriesOpen ? "arrow-up" : ""}
-            />
-          </button>
-
-          {categoriesOpen && (
-            <div className="category-menu">
-              {categories.map((category) => (
-                <a
-                  href={`/category/${category.name
-                    .toLowerCase()
-                    .replaceAll(" ", "-")}`}
-                  key={category.name}
-                  className="category-item"
-                >
-                  <div className="category-item-content">
-                    <span>{category.name}</span>
-
-                    <p className="category-description">
-                      {category.description}
-                    </p>
-                  </div>
-                </a>
-              ))}
+            <div className="category-item-content">
+              <span>{category.name}</span>
+              <p className="category-description">{category.description}</p>
             </div>
-          )}
-        </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
 
-        {/* ================= BRANDS ================= */}
-        <div className="category-wrapper">
-          <button
-            className="category-button"
-            onClick={() => setBrandsOpen(!brandsOpen)}
+  {/* Brands */}
+  <div className="category-wrapper">
+    <button
+      className="category-button"
+      onClick={() => setBrandsOpen(!brandsOpen)}
+    >
+      BRANDS
+      <ChevronDown size={16} className={brandsOpen ? "arrow-up" : ""} />
+    </button>
+    {brandsOpen && (
+      <div className="brands-menu">
+        {brands.map((brand) => (
+          <a
+            key={brand}
+            href={`/brand/${brand.toLowerCase().replaceAll(" ", "-")}`}
+            className="brand-item"
+            onClick={() => setMobileMenu(false)}   // close menu
           >
-            BRANDS
-            <ChevronDown
-              size={16}
-              className={brandsOpen ? "arrow-up" : ""}
-            />
-          </button>
+            {brand}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
 
-          {brandsOpen && (
-            <div className="brands-menu">
-              {brands.map((brand) => (
-                <a
-                  key={brand}
-                  href={`/brand/${brand.toLowerCase().replaceAll(" ", "-")}`}
-                  className="brand-item"
-                >
-                  {brand}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
+  <a href="/contact" onClick={() => setMobileMenu(false)}>
+    CONTACT US
+  </a>
+</nav>
 
-        <a href="/contact">
-          CONTACT US
-        </a>
-      </nav>
     </header>
   );
 }

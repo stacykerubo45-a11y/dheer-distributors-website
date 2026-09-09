@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   min-height: 75vh;
-
+ top: 160px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -377,8 +377,9 @@
 
   .home {
     min-height: calc(100vh - 130px);
-
+ top:100px;
     background-position: 60% center;
+    margin-bottom: 15px;
   }
 
 

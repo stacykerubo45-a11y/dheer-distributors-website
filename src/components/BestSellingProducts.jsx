@@ -7,8 +7,7 @@ const products = [
     id: 1,
     name: "Angle Grinder 900W 4.5 inch",
     brand: "Dewalt",
-    price: 6250,
-    oldPrice: 7500,
+   
     discount: "-25%",
     badge: "BESTSELLER",
     rating: 4.8,
@@ -19,8 +18,7 @@ const products = [
     id: 2,
     name: "Impact Drill 20V Brushless Kit",
     brand: "TOTAL",
-    price: 14500,
-    oldPrice: 18500,
+   
     discount: "-25%",
     badge: "BESTSELLER",
     rating: 4.7,
@@ -31,8 +29,7 @@ const products = [
     id: 3,
     name: "Claw Hammer 16oz Fiberglass Handle",
     brand: "DELI",
-    price: 890,
-    oldPrice: null,
+    
     discount: null,
     badge: "BESTSELLER",
     rating: 4.8,
@@ -43,8 +40,7 @@ const products = [
     id: 4,
     name: "Copper Twin & Earth Cable 2.5mm - 100m",
     brand: "VOLTEX",
-    price: 8400,
-    oldPrice: 9800,
+    
     discount: "-15%",
     badge: "BESTSELLER",
     rating: 4.9,
@@ -55,8 +51,7 @@ const products = [
     id: 5,
     name: "PVC Pipe 20mm - 4m Length",
     brand: "MAKITA",
-    price: 480,
-    oldPrice: null,
+    
     discount: null,
     badge: "BESTSELLER",
     rating: 4.5,
@@ -67,8 +62,7 @@ const products = [
     id: 6,
     name: "Ryobi P620 cordless paint sprayer",
     brand: "RYOBI",
-    price: 7800,
-    oldPrice: 8500,
+    
     discount: "-15%",
     badge: "BESTSELLER",
     rating: 4.7,
@@ -79,8 +73,7 @@ const products = [
     id: 7,
     name: "Portland Cement 50kg Bag",
     brand: "ROCKSOLID",
-    price: 780,
-    oldPrice: null,
+    
     discount: null,
     badge: "BESTSELLER",
     rating: 4.8,
@@ -91,8 +84,7 @@ const products = [
     id: 8,
     name: "Corrugated Roofing Sheet 2.5m",
     brand: "ROOFGUARD",
-    price: 1680,
-    oldPrice: 1900,
+   
     discount: "-14%",
     badge: "BESTSELLER",
     rating: 4.7,
@@ -113,10 +105,10 @@ export default function BestSellingProducts() {
               CONTRACTOR FAVOURITES
             </span>
 
-            <h2>Best-selling products</h2>
+          
 
             <p>
-              The tools and materials our trade customers reorder most.
+              Essential supplies trusted by professional tradespeople
             </p>
           </div>
         </div>
@@ -179,18 +171,8 @@ export default function BestSellingProducts() {
                   </span>
                 </div>
 
-                {/* PRICE */}
-                <div className="product-price">
-                  <span className="current-price">
-                    KES {product.price.toLocaleString()}
-                  </span>
-
-                  {product.oldPrice && (
-                    <span className="old-price">
-                      KES {product.oldPrice.toLocaleString()}
-                    </span>
-                  )}
-                </div>
+              
+                 
 
                 {/* STOCK */}
                 <span className="stock-status">
