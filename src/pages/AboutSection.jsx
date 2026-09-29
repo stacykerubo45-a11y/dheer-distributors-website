@@ -79,12 +79,11 @@ export default function AboutSection() {
           <div className="about-accent"></div>
 
           <p>
-            At Dheer Distributors Ltd, we have set the standards for
-            excellence in everything we do. With years of experience in
-            wholesale and retail, we offer competitive prices and efficient
-            delivery in Nairobi and countrywide. Our aim is to provide the
-            highest level of service in the shortest time.
-            Partner with us and let us support your success!
+           At Dheer Distributors Ltd, we have set the standards for excellence in
+everything we do. With years of experience in Wholesale and Retail, we offer
+competitive prices and efficient delivery in Nairobi and countrywide with the
+aim to provide highest level of service at the shortest time - Partner with us
+and let us support your success!!
           </p>
 
           <h2 className="about-title">
@@ -102,15 +101,25 @@ export default function AboutSection() {
             Vision
           </h2>
 
-          <p>Dheer Distributors is committed to being a one-stop 
-            solution for quality tools and hardware, offering a comprehensive
-             range at highly competitive prices. Our extensive catalogue spans
-              power tools, pneumatic equipment, air compressors, and the essential
-               accessories that support them  allowing our customers to source everything
-                they need from a single, reliable supplier.
-What distinguishes Dheer Distributors, however, is our unwavering focus on customer 
-service. This commitment to service excellence, combined with a carefully curated selection of quality products, has established us as one of Kenya's leading suppliers of tools and hardware.
-
+          <p>At Dheer Distributors Ltd, we're
+dedicated to delivering quality Tools and
+hardware at very competitive prices,
+with the aim  to deliver in the shortest
+time.
+At Dheer Distributors Ltd, our mission
+revolves around three core principles:
+Value,  Service, and Commitment 
+These pillars drive our efforts to cultivate
+enduring relationships with our Customers
+and Suppliers.
+Mission
+Vision
+We aim to lead in customer service by
+strengthening our brands, and 
+exemplary services. Every interaction is
+exceptional, and we anticipate and
+exceed needs, building lasting trust and
+commitment to our customers
 
           </p>
 
