@@ -1,15 +1,15 @@
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-
-  z-index: 1000;
   height: auto;
-   position: fixed;       /* stick to the top */
-  top: 0;                /* anchor at very top */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;           /* full width */
-  z-index: 1100;   
+  z-index: 1100;
 }
 
 /* =========================
@@ -50,7 +50,7 @@
 .social-section {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 15px;
 }
 
 .social-section span {
@@ -61,11 +61,34 @@
   color: white;
   display: flex;
   align-items: center;
-  transition: 0.2s ease;
+  justify-content: center;
+  transition: 0.3s ease;
 }
 
 .social-section a:hover {
   color: #f5a900;
+  transform: translateY(-2px);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #f5a900;
+  transform: translateY(-2px);
 }
 
 .social-divider {
@@ -74,22 +97,23 @@
   background: #777;
 }
 
+.social-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
 /* =========================
    MAIN NAV
 ========================= */
 
 .main-nav {
   height: 70px;
-  background: linear-gradient(
-    135deg,
-    #ffbd17,
-    #f5a900
-  );
+  background: linear-gradient(135deg, #ffbd17, #f5a900);
   display: flex;
   align-items: center;
   padding: 15px 3%;
   gap: 45px;
- 
 }
 
 /* =========================
@@ -198,6 +222,7 @@
 ========================= */
 
 .navigation {
+  position: relative;
   background: #f5a900;
   display: flex;
   justify-content: center;
@@ -262,70 +287,107 @@
   align-items: center;
   gap: 5px;
   padding: 10px 0;
+  transition: color 0.2s ease;
+}
+
+.category-button:hover {
+  color: #ffffff;
 }
 
 .category-button svg {
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .category-button .arrow-up {
   transform: rotate(180deg);
 }
 
+.category-button.dropdown-active {
+  color: #ffffff;
+}
+
 /* =========================
-   CATEGORY MENU
+   DROPDOWN ANIMATION
+========================= */
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* =========================
+   CATEGORY DROPDOWN
 ========================= */
 
 .category-menu {
   position: absolute;
-  top: 45px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 250px;
-  max-height: 380px;
+  width: 310px;
+  max-height: 440px;
   overflow-y: auto;
-
-  background: #171717;
-  border-radius: 8px;
-  padding: 6px 0;
-
-  display: flex;
+  background: #f5a900;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+  border-top: 3px solid #171717;
+  border-radius: 0 0 12px 12px;
+  padding: 0;
   flex-direction: column;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-
-  z-index: 1000;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  z-index: 1200;
+  animation: dropdownFade 0.2s ease;
 }
 
-/* Small triangle */
+/* =========================
+   DROPDOWN HEADING
+========================= */
 
-.category-menu::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+.dropdown-heading {
+  padding: 15px 18px 12px;
+  background: rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(23, 23, 23, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
 
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #171717;
+.dropdown-heading span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #171717;
+}
+
+.dropdown-heading small {
+  font-size: 10px;
+  color: rgba(23, 23, 23, 0.65);
 }
 
 /* =========================
    CATEGORY ITEMS
 ========================= */
 
+.dropdown-items {
+  display: flex;
+  flex-direction: column;
+}
+
 .category-item {
   display: block;
-  padding: 10px 15px;
-
-  color: white;
+  padding: 12px 18px;
+  color: #171717;
   text-decoration: none;
-
-  border-bottom: 1px solid #333;
-
-  transition: 0.2s ease;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+  transition:
+    background 0.2s ease,
+    padding-left 0.2s ease;
 }
 
 .category-item:last-child {
@@ -333,7 +395,8 @@
 }
 
 .category-item:hover {
-  background: #222;
+  background: rgba(255, 255, 255, 0.25);
+  padding-left: 23px;
 }
 
 .category-item-content {
@@ -344,72 +407,61 @@
 .category-item span {
   font-size: 13px;
   font-weight: 700;
+  color: #171717;
 }
 
 .category-description {
   font-size: 11px;
-  color: #bdbdbd;
-  margin: 3px 0 0;
-  line-height: 1.3;
+  color: rgba(23, 23, 23, 0.68);
+  margin: 4px 0 0;
+  line-height: 1.35;
 }
 
 /* =========================
-   BRANDS MENU
+   BRANDS DROPDOWN
 ========================= */
 
 .brands-menu {
   position: absolute;
-  top: 45px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 220px;
-  max-height: 380px;
+  width: 260px;
+  max-height: 390px;
   overflow-y: auto;
-
-  background: #171717;
-  border-radius: 8px;
-  padding: 6px 0;
-
-  display: flex;
+  background: #f5a900;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+  border-top: 3px solid #171717;
+  border-radius: 0 0 12px 12px;
+  padding: 0;
   flex-direction: column;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-
-  z-index: 1000;
-}
-
-/* Small triangle */
-
-.brands-menu::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #171717;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  z-index: 1200;
+  animation: dropdownFade 0.2s ease;
 }
 
 /* =========================
    BRAND ITEMS
 ========================= */
 
+.brand-items {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-item {
-  display: block;
-
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #171717;
   text-decoration: none;
-
-  padding: 9px 15px;
-
+  padding: 11px 18px;
   font-size: 13px;
-
-  border-bottom: 1px solid #333;
-
-  transition: 0.2s ease;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+  transition:
+    background 0.2s ease,
+    padding-left 0.2s ease;
 }
 
 .brand-item:last-child {
@@ -417,8 +469,87 @@
 }
 
 .brand-item:hover {
-  color: #f5a900;
-  background: #222;
+  background: rgba(255, 255, 255, 0.25);
+  padding-left: 23px;
+}
+
+.brand-item span {
+  color: #171717;
+}
+
+.brand-arrow {
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  transition: 0.2s ease;
+}
+
+.brand-item:hover .brand-arrow {
+  opacity: 1;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.category-menu::-webkit-scrollbar,
+.brands-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-menu::-webkit-scrollbar-track,
+.brands-menu::-webkit-scrollbar-track {
+  background: rgba(23, 23, 23, 0.08);
+}
+
+.category-menu::-webkit-scrollbar-thumb,
+.brands-menu::-webkit-scrollbar-thumb {
+  background: rgba(23, 23, 23, 0.35);
+  border-radius: 10px;
+}
+
+.category-menu::-webkit-scrollbar-thumb:hover,
+.brands-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 23, 23, 0.55);
+}
+
+/* =========================
+   WHATSAPP ORDER BUTTON
+========================= */
+
+.whatsapp-order-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1200;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 18px;
+  border-radius: 50px;
+
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.whatsapp-order-button svg {
+  font-size: 23px;
+}
+
+.whatsapp-order-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================
@@ -438,33 +569,24 @@
   cursor: pointer;
 }
 
-/* =========================
-   SOCIAL
-========================= */
+/* ==================================================
+   DESKTOP DROPDOWN HOVER
+================================================== */
 
-.social-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+@media (min-width: 769px) {
+  .category-menu,
+  .brands-menu {
+    display: none;
+  }
 
-.social-section a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: 0.3s ease;
-}
+  .category-wrapper:hover .category-menu,
+  .category-wrapper:hover .brands-menu {
+    display: flex;
+  }
 
-.social-section a:hover {
-  color: #171717;
-  transform: translateY(-2px);
-}
-
-.social-logo {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
+  .category-wrapper:hover .category-button {
+    background: rgba(0, 0, 0, 0.08);
+  }
 }
 
 /* =========================
@@ -472,7 +594,6 @@
 ========================= */
 
 @media (max-width: 1100px) {
-
   .main-nav {
     gap: 20px;
     padding: 12px 3%;
@@ -497,7 +618,11 @@
   }
 
   .category-menu {
-    width: 250px;
+    width: 290px;
+  }
+
+  .brands-menu {
+    width: 240px;
   }
 }
 
@@ -506,7 +631,6 @@
 ========================= */
 
 @media (max-width: 768px) {
-
   /* ---------- TOP BAR ---------- */
 
   .top-bar {
@@ -679,6 +803,9 @@
   .category-menu,
   .brands-menu {
     position: static;
+
+    display: flex;
+
     transform: none;
 
     width: 100%;
@@ -686,20 +813,37 @@
     max-height: 300px;
 
     margin: 0;
-    padding: 5px 0;
 
-    border-radius: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(23, 23, 23, 0.1);
+    border-top: 2px solid #171717;
 
     box-shadow: none;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    animation: none;
   }
 
-  .category-menu::before,
-  .brands-menu::before {
-    display: none;
+  .dropdown-heading {
+    padding: 12px 15px 10px;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .dropdown-heading span {
+    font-size: 11px;
+  }
+
+  .dropdown-heading small {
+    font-size: 9px;
   }
 
   .category-item {
     padding: 10px 15px;
+  }
+
+  .category-item:hover {
+    padding-left: 20px;
   }
 
   .category-item span {
@@ -712,8 +856,37 @@
   }
 
   .brand-item {
-    padding: 9px 15px;
+    padding: 10px 15px;
     font-size: 12px;
+  }
+
+  .brand-item:hover {
+    padding-left: 20px;
+  }
+
+  .category-menu::-webkit-scrollbar,
+  .brands-menu::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* ---------- WHATSAPP ---------- */
+
+  .whatsapp-order-button {
+    right: 16px;
+    bottom: 16px;
+    padding: 13px;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .whatsapp-order-button span {
+    display: none;
+  }
+
+  .whatsapp-order-button svg {
+    font-size: 25px;
   }
 }
 
@@ -723,30 +896,18 @@
 ========================= */
 
 @media (max-width: 480px) {
-
- /* AFTER */
-.top-bar {
-  
-  display: none;
-}
-
-
-
-
-  /* Main navigation */
+  .top-bar {
+    display: none;
+  }
 
   .main-nav {
     padding: 9px 10px;
     gap: 7px;
   }
 
-  /* Logo */
-
   .logo {
     width: clamp(100px, 30vw, 140px);
   }
-
-  /* Cart */
 
   .cart-button {
     width: 42px;
@@ -758,14 +919,10 @@
     height: 19px;
   }
 
-  /* Menu */
-
   .mobile-menu-button {
     width: 42px;
     height: 42px;
   }
-
-  /* Search */
 
   .search-container {
     height: 44px;
@@ -781,8 +938,6 @@
     width: 48px;
   }
 
-  /* Navigation */
-
   .navigation {
     padding-left: 10px;
     padding-right: 10px;
@@ -795,8 +950,6 @@
     padding: 13px 8px;
   }
 
-  /* Category / Brand */
-
   .category-menu,
   .brands-menu {
     max-height: 280px;
@@ -804,6 +957,10 @@
 
   .category-item {
     padding: 9px 12px;
+  }
+
+  .category-item:hover {
+    padding-left: 17px;
   }
 
   .category-item span {
@@ -818,6 +975,10 @@
     padding: 8px 12px;
     font-size: 11px;
   }
+
+  .brand-item:hover {
+    padding-left: 17px;
+  }
 }
 
 /* =========================
@@ -826,11 +987,12 @@
 ========================= */
 
 @media (max-width: 375px) {
-.top-bar {
+  .top-bar {
     padding: 0;
     width: 100%;
     height: auto;
   }
+
   .top-left {
     flex-direction: row;
     gap: 2px;
@@ -844,7 +1006,6 @@
     font-size: 5px;
     padding: 0;
     flex-direction: row;
-
   }
 
   .main-nav {
@@ -903,7 +1064,6 @@
 ========================= */
 
 @media (max-width: 320px) {
-
   .logo {
     width: 95px;
   }
@@ -958,4 +1118,3 @@
     font-size: 10px;
   }
 }
-

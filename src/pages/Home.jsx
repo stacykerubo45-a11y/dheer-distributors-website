@@ -38,23 +38,24 @@ export default function Home() {
           </p>
 
           <h1>
-            Quality Products.
+           Everything Your Project Needs
             <br />
-            <span>Reliable Solutions.</span>
+            <span>Under One Roof.</span>
           </h1>
 
           <p className="home-description">
-            Your trusted partner for quality products and
-            reliable distribution solutions.
+            From power tools to plumbing fittings, we 
+            supply the trade and the public with quality products 
+            from trusted brands.
           </p>
 
           <div className="home-buttons">
             <button className="home-btn primary-btn">
-              Explore Products
+              Browse Products
             </button>
 
             <button className="home-btn secondary-btn">
-              Contact Us
+              Request a Quote
             </button>
           </div>
         </div>

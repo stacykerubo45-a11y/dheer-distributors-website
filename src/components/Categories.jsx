@@ -65,11 +65,14 @@ export default function Categories() {
           </h2>
 
           <p className="categories-description">
-            Explore our wide range of quality tools,
-            hardware and industrial supplies.
+            A complete range of tools and hardware for construction, industry,
+             agriculture and home.
           </p>
         </header>
-
+      <button className="view-products-btn">
+      View All Products
+      <span>→</span>
+    </button>
         <div className="categories-grid">
           {categories.map((category) => (
             <article
