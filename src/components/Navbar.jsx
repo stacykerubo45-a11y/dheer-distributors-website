@@ -15,6 +15,7 @@ import {
   FaInstagram,
   FaTiktok,
   FaFacebookF,
+  FaShoppingBag,
 } from "react-icons/fa";
 import "../styles/Navbar.css";
 
@@ -63,13 +64,28 @@ export default function Navbar() {
   ];
 
   const brands = [
-    "Bosch",
-    "Ryobi",
-    "Tolsen",
+      "Total",
+     "Bosch",
     "Ingco",
-    "Total",
+   "Tolsen",
+    "Deli",
+   "Uyustools",
+   "Stanley",
+  "Wadfow",
+  "Prescott",
+    "Proskit",
+     "Makita",
     "Makute",
-    "Uyustools",
+    "Tanquin",
+     "Fixtec",
+ "Worksite",
+  
+  
+    "Black & Decker",
+  "CAT",
+   
+    "Ryobi",
+  
   ];
 
   const closeMobileMenu = () => {
@@ -146,6 +162,15 @@ export default function Navbar() {
     >
       <FaFacebookF />
     </a>
+    <a
+  href="https://www.pigiame.co.ke/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-link"
+>
+  <FaShoppingBag />
+  
+</a>
   </div>
 </div>
         </div>
@@ -180,6 +205,14 @@ export default function Navbar() {
           <span>CART</span>
           <span className="cart-count">0</span>
         </button>
+        <a
+  href="https://wa.me/254705731829?text=Hello%20Dheer%20Distributors,%20I%20would%20like%20to%20request%20a%20quote."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="quote-btn"
+>
+  Request a Quote
+</a>
 
         {/* Mobile menu button */}
         <button

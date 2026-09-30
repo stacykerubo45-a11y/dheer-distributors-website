@@ -8,6 +8,13 @@ import {
   
   ArrowUp,
 } from "lucide-react";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaTiktok,
+  FaFacebookF,
+  FaShoppingBag,
+} from "react-icons/fa";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -112,6 +119,54 @@ export default function Footer() {
               dheerdistributorsltd@gmail.com
             </a>
           </div>
+           <div className="social-icons">
+    <a
+      href="https://wa.me/254705731829"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+    >
+      <FaWhatsapp />
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <FaInstagram />
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <FaTiktok />
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <FaFacebookF />
+    </a>
+    <a
+  href="https://www.pigiame.co.ke/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-link"
+>
+  <FaShoppingBag />
+  
+</a>
+  </div>
+
+
         </div>
       </div>
 
@@ -120,11 +175,21 @@ export default function Footer() {
         <p>Trusted Brands</p>
 
         <div className="brand-names">
-          <span>INGCO</span>
-          <span>BOSCH</span>
-          <span>MAKUTE</span>
-          <span>TOLSEN</span>
           <span>TOTAL</span>
+<span>BOSCH</span>
+<span>INGCO</span>
+<span>TOLSEN</span>
+<span>DELI</span>
+<span>UYUSTOOLS</span>
+<span>STANLEY</span>
+<span>WADFOW</span>
+<span>PRESCOTT</span>
+<span>PROSKIT</span>
+<span>MAKITA</span>
+<span>MAKUTE</span>
+<span>TANQUIN</span>
+<span>FIXTEC</span>
+<span>WORKSITE</span>
         </div>
       </div>
 
